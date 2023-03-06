@@ -1,8 +1,14 @@
 package com.example.springbootproject.model;
 
+
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.time.LocalDate;
 
+@Entity
 public class Match {
+    @Id
     private Long id;
     private String city;
     private LocalDate date;
@@ -35,6 +41,11 @@ public class Match {
     public Long getId() {
         return id;
     }
+    private String tossDecision;
+    private String winner;
+    private String result;
+    private String resultMargin;
+    private String eliminator;
 
     public void setId(Long id) {
         this.id = id;
@@ -144,9 +155,4 @@ public class Match {
         this.eliminator = eliminator;
     }
 
-    private String tossDecision;
-    private String winner;
-    private String result;
-    private String resultMargin;
-    private String eliminator;
 }

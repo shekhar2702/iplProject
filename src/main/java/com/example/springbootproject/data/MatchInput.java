@@ -16,6 +16,9 @@ public class MatchInput {
     private String result;
     private String result_margin;
     private String eliminator;
+    private String method;
+    private String umpire1;
+    private String umpire2;
 
     public String getId() {
         return id;
@@ -153,8 +156,5 @@ public class MatchInput {
         this.umpire2 = umpire2;
     }
 
-    String method;
-    String umpire1;
-    String umpire2;
 
 }
