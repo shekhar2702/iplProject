@@ -2,20 +2,20 @@ package com.example.springbootproject.data;
 
 public class MatchInput {
 
-    String id;
-    String city;
-    String date;
-    String player_of_match;
-    String venue;
-    String neutral_venue;
-    String team1;
-    String team2;
-    String toss_winner;
-    String toss_decision;
-    String winner;
-    String result;
-    String result_margin;
-    String eliminator;
+    private String id;
+    private String city;
+    private String date;
+    private String player_of_match;
+    private String venue;
+    private String neutral_venue;
+    private String team1;
+    private String team2;
+    private String toss_winner;
+    private String toss_decision;
+    private String winner;
+    private String result;
+    private String result_margin;
+    private String eliminator;
 
     public String getId() {
         return id;
