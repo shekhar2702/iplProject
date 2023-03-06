@@ -1,15 +1,15 @@
-package com.example.springbootproject.model;
+package com.example.iplDashboard.model;
 
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import java.time.LocalDate;
 
 @Entity
 public class Match {
     @Id
-    private Long id;
+    private long id;
     private String city;
     private LocalDate date;
     private String playerOfMatch;

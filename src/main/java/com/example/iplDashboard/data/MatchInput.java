@@ -1,8 +1,8 @@
-package com.example.springbootproject.data;
+package com.example.iplDashboard.data;
 
 public class MatchInput {
 
-    private String id;
+    private long id;
     private String city;
     private String date;
     private String player_of_match;
@@ -20,11 +20,11 @@ public class MatchInput {
     private String umpire1;
     private String umpire2;
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 

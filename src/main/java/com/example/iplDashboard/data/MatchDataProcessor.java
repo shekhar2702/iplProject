@@ -1,6 +1,6 @@
-package com.example.springbootproject.data;
+package com.example.iplDashboard.data;
 
-import com.example.springbootproject.model.Match;
+import com.example.iplDashboard.model.Match;
 import org.springframework.batch.item.ItemProcessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +13,7 @@ public class MatchDataProcessor implements ItemProcessor<MatchInput, Match> {
     @Override
     public Match process(final MatchInput matchInput) throws Exception {
         Match match = new Match();
-        match.setId(Long.parseLong(matchInput.getId()));
+        match.setId(matchInput.getId());
         match.setCity(matchInput.getCity());
         match.setDate(LocalDate.parse(matchInput.getDate()));
         match.setPlayerOfMatch(matchInput.getPlayer_of_match());
