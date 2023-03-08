@@ -45,6 +45,12 @@ public class Team {
     public void setTotalWins(long totalWins) {
         this.totalWins = totalWins;
     }
+
+    public Team(String teamName, long totalMatches) {
+        this.teamName = teamName;
+        this.totalMatches = totalMatches;
+    }
+
     @Override
     public String toString() {
         return "Team{" +
