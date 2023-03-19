@@ -3,11 +3,13 @@ package com.example.iplDashboard.controller;
 import com.example.iplDashboard.model.Team;
 import com.example.iplDashboard.repository.MatchRepository;
 import com.example.iplDashboard.repository.TeamRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin
 public class TeamsController {
     private final TeamRepository teamRepository;
     private final MatchRepository matchRepository;
