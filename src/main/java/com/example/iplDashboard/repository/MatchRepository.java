@@ -5,6 +5,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public interface MatchRepository extends CrudRepository<Match, Long> {
@@ -12,4 +13,7 @@ public interface MatchRepository extends CrudRepository<Match, Long> {
     public default List<Match> findLatestMatches(String teamName, int count) {
         return findByTeam1OrTeam2OrderByDateDesc(teamName,teamName, PageRequest.of(0,count));
     }
+
+    List<Match> getByTeam1AndDateBetweenOrTeam2AndDateBetweenOrderByDateDesc(String team1, LocalDate date1, LocalDate date2, String team2, LocalDate date3, LocalDate date4);
+
 }
