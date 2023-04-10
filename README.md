@@ -4,4 +4,4 @@
  • Used spring batch to process and save bulk data in the database along with spring boot.
  • Deployed application using Elastic Beanstalk.
  • Project URL:- http://iplhistorydashboad-env.eba-xann2knf.ap-south-1.elasticbeanstalk.com/
- • Fututre todos:- Implement CI/CD using github actions.
+ • Implemented automated CI/CD using github actions
