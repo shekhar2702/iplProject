@@ -1,2 +1,2 @@
-cd ../../src/frontend/
+cd ../src/frontend/
 yarn build
