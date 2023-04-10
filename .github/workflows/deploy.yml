@@ -16,7 +16,7 @@ on:
 jobs:
   build:
     name: Build Archive
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 #Will run steps on latest version of windows
     steps:
      #Check-out your repository under $GITHUB_WORKSPACE, so your workflow can access itipl-dashboard-0.0.1-SNAPSHOT.war
@@ -43,7 +43,7 @@ jobs:
     needs: build
     name: Deploy to Elastic Beanstalk
      #Will run steps on latest version of ubuntu
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Download JAR
         #Download the artifact which was uploaded in the Build Archive's job
