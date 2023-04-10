@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from 'react';
 import './HomePage.scss';
 import { TeamTile } from '../components/TeamTile';
+import {HomeLink} from "../components/HomeLink";
 
 
 export const HomePage = () => {
@@ -23,6 +24,7 @@ export const HomePage = () => {
 
     return (
         <div className="HomePage">
+            <HomeLink />
             <div className="header-section">
                 <h1 className="app-name">IPL History Dashboard</h1>
             </div>

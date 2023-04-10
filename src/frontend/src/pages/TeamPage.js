@@ -4,6 +4,7 @@ import {MatchSmallCard} from "../components/MatchSmallCard";
 import {Link, useParams} from "react-router-dom";
 import './TeamPage.scss';
 import { PieChart } from 'react-minimal-pie-chart';
+import {HomeLink} from "../components/HomeLink";
 
 export const TeamPage = () => {
 
@@ -11,16 +12,15 @@ export const TeamPage = () => {
     const {teamName} = useParams();
     useEffect(() => {
         const getTeams = async () => {
-            // console.log(teamName);
-            const response = await fetch(`http://localhost:8080/team/${teamName}`);
+            const response = await fetch(`${process.env.REACT_APP_API_ROOT_URL}/team/${teamName}`);
             const data = await response.json();
             setTeam(data);
-            console.log(data);
         }
         getTeams();
     },[teamName])
 
     return team ? (
+    <div><HomeLink />
    <div className="TeamPage">
         <div className="team-name-section"><h1 className="team-name">{team.teamName}</h1></div>
         <div className="win-loss-section">
@@ -40,6 +40,7 @@ export const TeamPage = () => {
        <div className="more-link">
            <Link to={`/teams/${teamName}/matches/${process.env.REACT_APP_DATA_END_YEAR}`}>More></Link>
        </div>
+    </div>
     </div>
     )
         : null;
