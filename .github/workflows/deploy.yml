@@ -21,6 +21,8 @@ jobs:
     steps:
      #Check-out your repository under $GITHUB_WORKSPACE, so your workflow can access itipl-dashboard-0.0.1-SNAPSHOT.war
     - uses: actions/checkout@v3
+    - name: Print current directory path
+      run: echo "Current working directory is ${PWD}"
     - name: Setup Node.js environment
       uses: actions/setup-node@v2.5.2
       with:
